@@ -1,0 +1,33 @@
+env: local
+http:
+  port: 8080
+security:
+  jwt_secret: 462cd801-b528-4bd3-b432-42448cedd252
+db:
+  driver: postgres
+  host: 127.0.0.1
+  port: 5432
+  database: go-api
+  user: postgres
+  password: postgres
+  connectionString: postgres://postgres:postgres@127.0.0.1:5432/go-api?sslmode=disable
+data:
+  # postgresql:
+  #   user: postgres
+  #   password: postgres
+  #   connectionString: postgres://postgres:postgres@127.0.0.1:2345/go-api?sslmode=disable
+  #   host:
+  redis:
+    addr: 127.0.0.1:6379
+    password: ''
+    db: 0
+    read_timeout: 0.2s
+    write_timeout: 0.2s
+log:
+  log_level: debug
+  encoding: console # json or console
+  log_file_name: './storage/logs/server.log'
+  max_backups: 30
+  max_age: 7
+  max_size: 1024
+  compress: true

@@ -1,0 +1,4 @@
+tmp
+db.sqlite
+postgres_data
+*.log
